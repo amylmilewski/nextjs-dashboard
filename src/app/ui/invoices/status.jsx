@@ -1,6 +1,7 @@
 import { CheckIcon, ClockIcon } from '@heroicons/react/24/outline';
 import clsx from 'clsx';
 
+// The component accepts a prop named status, which is a string representing the status of the invoice (pending or paid).
 export default function InvoiceStatus({ status }) {
   return (
     <span
@@ -9,6 +10,7 @@ export default function InvoiceStatus({ status }) {
         {
           'bg-gray-100 text-gray-500': status === 'pending',
           'bg-green-500 text-white': status === 'paid',
+          'bg-red-500 text-white': status === 'late'
         },
       )}
     >
@@ -22,6 +24,12 @@ export default function InvoiceStatus({ status }) {
         <>
           Paid
           <CheckIcon className="ml-1 w-4 text-white" />
+        </>
+      ) : null}
+      {status === 'late' ? (
+        <>
+          Late
+          <ClockIcon className="ml-1 w-4 text-white" />
         </>
       ) : null}
     </span>
