@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+/*
+@tailwind base;: This directive includes base styles provided by Tailwind CSS, typically consisting of CSS resets and normalization.
+@tailwind components;: This directive includes component styles provided by Tailwind CSS, such as styles for buttons, forms, and other standard UI components.
+@tailwind utilities;: This directive includes utility classes provided by Tailwind CSS, which allow for quick and flexible styling of elements using utility classes such as bg-blue-500 or text-center.
+*/
+
 input[type='number'] {
   -moz-appearance: textfield;
   appearance: textfield;
